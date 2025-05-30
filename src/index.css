@@ -1,0 +1,24 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  overflow: hidden;
+}
+@import "tailwindcss";
+/* Custom Font Import */
+@font-face {
+  font-family: 'Whispering Signature';
+  src: url('/fonts/WhisperingSignature.woff2') format('woff2'),
+       url('/fonts/WhisperingSignature.woff') format('woff'),
+       url('/fonts/WhisperingSignature.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
