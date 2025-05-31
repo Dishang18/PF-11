@@ -13,6 +13,7 @@ const Hero = ({ name = "Dishang Patel" }) => {
     let index = 0;
     // Reset text when name changes
     setDisplayText('');
+    setIsTypingComplete(false);
     
     const typingInterval = setInterval(() => {
       if (index < fullText.length) {
@@ -28,8 +29,8 @@ const Hero = ({ name = "Dishang Patel" }) => {
   }, [fullText]);
   
   return (
-    <section className="h-screen w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 relative z-10 overflow-hidden -mt-32">
-      <div className="relative text-center max-w-6xl mx-auto">
+    <section className="min-h-[85vh] sm:min-h-[90vh] md:min-h-screen w-full flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 relative z-10 overflow-hidden pt-16 pb-12 sm:pt-20 sm:pb-16 md:pt-0 md:pb-0">
+      <div className="relative text-center w-full max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -37,17 +38,19 @@ const Hero = ({ name = "Dishang Patel" }) => {
         >
           {/* Main Title */}
           <motion.h1 
-            className="font-signature text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white m-0 relative font-extrabold whitespace-nowrap"
+            className="font-signature text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white m-0 relative font-extrabold"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="relative z-10">{displayText}</span>
+            <div className="relative z-10 inline-block">
+              {displayText}
             
-            {/* Cursor */}
-            {!isTypingComplete && (
-              <span className="inline-block w-[0.08em] h-[1.2em] bg-red-500 ml-1 animate-pulse align-middle"></span>
-            )}
+              {/* Cursor */}
+              {!isTypingComplete && (
+                <span className="inline-block w-[0.08em] h-[1.2em] bg-red-500 ml-1 animate-pulse align-middle"></span>
+              )}
+            </div>
             
             {/* Text Glow Effect - Ensure this uses the exact same text */}
             <motion.span
@@ -60,12 +63,12 @@ const Hero = ({ name = "Dishang Patel" }) => {
           
           {/* Subtitle */}
           <motion.p 
-            className="text-xl sm:text-2xl md:text-3xl text-white/80 mt-5 md:mt-6 font-medium relative mx-auto max-w-3xl"
+            className="text-lg xs:text-xl sm:text-2xl md:text-3xl text-white/80 mt-4 sm:mt-5 md:mt-6 font-medium relative mx-auto max-w-xs xs:max-w-sm sm:max-w-xl md:max-w-3xl px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isTypingComplete ? 1 : 0, y: isTypingComplete ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="relative z-10">
+            <span className="relative z-10 leading-relaxed">
               A Software developer who loves practical applications and real world problem solving.
             </span>
             {/* Subtitle Glow */}
