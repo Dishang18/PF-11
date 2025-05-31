@@ -40,7 +40,8 @@ const GridBackground = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[-1] bg-black overflow-hidden">
+    // Changed from fixed to absolute, removed overflow-hidden
+    <div className="fixed inset-0 z-0 bg-black pointer-events-none">
       {/* Grid Background */}
       <div 
         className="absolute inset-0" 
@@ -53,6 +54,7 @@ const GridBackground = () => {
         }}
       />
       
+      {/* Rest of the code remains the same */}
       {/* Expanded glowing effect */}
       <motion.div
         className="absolute pointer-events-none blur-[100px]"
