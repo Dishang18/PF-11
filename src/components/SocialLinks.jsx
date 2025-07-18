@@ -8,9 +8,8 @@ const SocialLinks = () => {
     { icon: <FaGithub />, url: "https://github.com/Dishang18", label: "GitHub" },
     { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/dishang-patel-76b88b2b0", label: "LinkedIn" },
     { icon: <FaDownload />, url: "/Dishang_Patel_Resume.pdf", label: "Resume", openNewTab: true },
-    { icon: <FaEnvelope />, url: "mailto:dishangpatelce.26@gmail.com", label: "Email" },
-    { icon: <BsFillBriefcaseFill />, url: "/portfolio", label: "Projects" },
-    { icon: <BsBarChartFill />, url: "/stats", label: "Stats" },
+    { icon: <FaEnvelope />, url: "mailto:dishangpatel.ce26@gmail.com", label: "Email" },
+    { icon: <BsBarChartFill />, url: "https://leetcode.com/u/Dishang11/", label: "Stats" },
   ];
   
   // Function to handle clicks for debugging

@@ -33,24 +33,13 @@ const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
+  // ...existing code...
   const skills = [
     {
       name: 'JavaScript',
       icon: <FaJs className="text-yellow-400" size={40} />,
       description: 'Modern JavaScript with ES6+ features, asynchronous programming, and DOM manipulation',
       categories: ['languages', 'frontend', 'backend']
-    },
-    {
-      name: 'TypeScript',
-      icon: <SiTypescript className="text-blue-400" size={40} />,
-      description: 'Strongly-typed JavaScript that enhances code quality and developer experience',
-      categories: ['languages', 'frontend', 'backend']
-    },
-    {
-      name: 'Python',
-      icon: <FaPython className="text-blue-600" size={40} />,
-      description: 'Versatile language used for web development, data analysis, automation and scripting',
-      categories: ['languages', 'backend']
     },
     {
       name: 'Java',
@@ -131,12 +120,6 @@ const Skills = () => {
       categories: ['databases']
     },
     {
-      name: 'Firebase',
-      icon: <SiFirebase className="text-yellow-500" size={40} />,
-      description: 'Google platform providing backend services including authentication, databases, and hosting',
-      categories: ['backend', 'databases', 'devops']
-    },
-    {
       name: 'Docker',
       icon: <FaDocker className="text-blue-500" size={40} />,
       description: 'Platform for developing, shipping, and running applications in containers',
@@ -153,20 +136,9 @@ const Skills = () => {
       icon: <SiPostman className="text-orange-500" size={40} />,
       description: 'API platform for building and using APIs with features for testing and documentation',
       categories: ['devops', 'backend']
-    },
-    {
-      name: 'Data Structures & Algorithms',
-      icon: <BsStack className="text-green-400" size={40} />,
-      description: 'Strong foundation in algorithmic problem solving and efficient data structure implementation',
-      categories: ['core']
-    },
-    {
-      name: 'Operating Systems',
-      icon: <BsWindowDesktop className="text-purple-400" size={40} />,
-      description: 'Understanding of OS concepts including process management, memory allocation, and file systems',
-      categories: ['core']
     }
   ];
+//
 
   const filteredSkills = activeCategory === 'all' 
     ? skills 
