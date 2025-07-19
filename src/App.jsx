@@ -8,8 +8,9 @@ import SocialLinks from './components/SocialLinks';
 import Lenis from '@studio-freight/lenis';
 function App() {
   useEffect(() => {
+    //document.body.classList.add('lenis', 'lenis-smooth');
     const lenis = new Lenis({
-      lerp: 0.1, // Adjust for smoothness
+      lerp: 0.15, // Adjust for smoothness
       smooth: true,
     });
 
