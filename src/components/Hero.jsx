@@ -7,7 +7,7 @@ const Hero = ({ name = "Dishang Patel" }) => {
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   
   // Construct full text with proper spacing
-  const fullText = `I am Dishang Patel`;
+  const fullText = `I am Dishang Patel.`;
   
   useEffect(() => {
     let index = 0;

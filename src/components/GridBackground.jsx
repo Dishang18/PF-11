@@ -40,7 +40,6 @@ const GridBackground = () => {
   }, []);
 
   return (
-    // Changed from fixed to absolute, removed overflow-hidden
     <div className="fixed inset-0 z-0 bg-black pointer-events-none">
       {/* Grid Background */}
       <div 
@@ -54,7 +53,6 @@ const GridBackground = () => {
         }}
       />
       
-      {/* Rest of the code remains the same */}
       {/* Expanded glowing effect */}
       <motion.div
         className="absolute pointer-events-none blur-[100px]"
@@ -63,12 +61,12 @@ const GridBackground = () => {
           y: cursorYSpring,
           width: `${SQUARE_SIZE * 3}px`,
           height: `${SQUARE_SIZE * 3}px`,
-          backgroundColor: 'rgba(197, 60, 4, 0.2)',
+          backgroundColor: 'rgba(255, 33, 33, 0.22)', // Deeper, more saturated red
           transform: 'translate(-33%, -33%)'
         }}
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
+          opacity: [0.25, 0.45, 0.25],
         }}
         transition={{
           duration: 4,
@@ -85,12 +83,12 @@ const GridBackground = () => {
           y: cursorYSpring,
           width: `${SQUARE_SIZE * 2}px`,
           height: `${SQUARE_SIZE * 2}px`,
-          backgroundColor: 'rgba(255, 107, 53, 0.3)',
+          backgroundColor: 'rgba(255, 64, 64, 0.31)', // Stronger red
           transform: 'translate(-25%, -25%)'
         }}
         animate={{
           scale: [1.2, 1, 1.2],
-          opacity: [0.3, 0.5, 0.3],
+          opacity: [0.33, 0.5, 0.33],
         }}
         transition={{
           duration: 3,
@@ -111,21 +109,21 @@ const GridBackground = () => {
         }}
         animate={{
           boxShadow: [
-            '0 0 30px rgba(197, 60, 4, 0.6)',
-            '0 0 60px rgba(197, 60, 4, 0.4)',
-            '0 0 30px rgba(197, 60, 4, 0.6)',
+            '0 0 30px rgba(255, 33, 33, 0.7)',   // Deeper red
+            '0 0 60px rgba(255, 33, 33, 0.5)',
+            '0 0 30px rgba(255, 33, 33, 0.7)',
           ]
         }}
         transition={{ duration: 3, repeat: Infinity }}
       >
-        {/* Inner square with enhanced gradient */}
+        {/* Inner square, no border radius, strong red gradient */}
         <div 
           className="w-full h-full"
           style={{
-            background: 'linear-gradient(135deg, #C53C04 0%, #FF6B35 50%, #C53C04 100%)',
-            border: '2px solid rgba(255, 255, 255, 0.3)',
-            borderRadius: '8px',
-            boxShadow: 'inset 0 0 20px rgba(255, 255, 255, 0.2)'
+            background: 'linear-gradient(135deg, #FF2121 0%, #FF4C4C 50%, #FF2121 100%)',
+            border: '2px solid rgba(255, 255, 255, 0.17)',
+            borderRadius: '0px', // No border radius
+            boxShadow: 'inset 0 0 20px rgba(255, 255, 255, 0.13)'
           }}
         />
       </motion.div>
@@ -136,12 +134,12 @@ const GridBackground = () => {
         style={{
           backgroundImage: `radial-gradient(
             circle at ${gridPos.x}px ${gridPos.y}px,
-            rgba(197, 60, 4, 0.2) 0%,
+            rgba(255, 33, 33, 0.22) 0%,
             transparent 40%
           )`
         }}
         animate={{
-          opacity: [0.8, 1, 0.8]
+          opacity: [0.85, 1, 0.85]
         }}
         transition={{
           duration: 2,

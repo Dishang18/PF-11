@@ -26,14 +26,13 @@ const Skills = () => {
     { id: 'frontend', name: 'Frontend', icon: '🖥️' },
     { id: 'backend', name: 'Backend', icon: '⚙️' },
     { id: 'databases', name: 'Databases', icon: '🗄️' },
-    { id: 'devops', name: 'DevOps', icon: '🔧' },
-    { id: 'core', name: 'Core CS', icon: '🧠' }
+    { id: 'devops', name: 'DevOps', icon: '🔧' }
+    // Removed { id: 'core', name: 'Core CS', icon: '🧠' }
   ];
 
   const [activeCategory, setActiveCategory] = useState('all');
   const [hoveredSkill, setHoveredSkill] = useState(null);
 
-  // ...existing code...
   const skills = [
     {
       name: 'JavaScript',
@@ -138,7 +137,6 @@ const Skills = () => {
       categories: ['devops', 'backend']
     }
   ];
-//
 
   const filteredSkills = activeCategory === 'all' 
     ? skills 
