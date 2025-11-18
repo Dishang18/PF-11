@@ -118,12 +118,7 @@ const Skills = () => {
       description: 'Popular relational database management system for web applications and data storage',
       categories: ['databases']
     },
-    {
-      name: 'Docker',
-      icon: <FaDocker className="text-blue-500" size={40} />,
-      description: 'Platform for developing, shipping, and running applications in containers',
-      categories: ['devops']
-    },
+    
     {
       name: 'Git',
       icon: <SiGit className="text-red-500" size={40} />,

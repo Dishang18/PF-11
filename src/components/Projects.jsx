@@ -32,21 +32,21 @@ const Projects = () => {
       position: "Farmer-Consumer Marketplace",
       logo: "KS",
       description: "A platform connecting farmers directly to consumers with analytics, secure payments, and geolocation-based filtering.",
-      duration: "2023",
+      duration: "2024",
       location: "Web Application",
       techs: ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay", "Geolocation API"],
       color: "#5bbb7b",
       achievements: [
         "Enabled farmers to list products, accept orders, and visualize sales with dynamic charts",
         "Integrated Razorpay for secure payments and real-time order tracking",
-        "Implemented geolocation filters to show products within a 50 km radius",
+        "Implemented geolocation filters to show products within a 100 km radius",
         "Developed AI price prediction and real-time chat/notifications"
       ],
-      detailedTechs: ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay API", "Chart.js", "Geolocation API", "Socket.io", "JWT Auth", "TensorFlow.js"],
-      image: "https://images.pexels.com/photos/5273059/pexels-photo-5273059.jpeg",
+      detailedTechs: ["React.js", "Node.js", "Express.js", "MongoDB", "Razorpay API", "Chart.js", "Geolocation API", "Socket.io", "JWT Auth"],
+      image: "/krushi-setu.png",
       categories: ["Full Stack", "E-Commerce"],
       codeUrl: "https://github.com/Dishang18/KrushiSetu_DishangPatel_13",
-      liveUrl: "https://krushi-setu.vercel.app"
+      liveUrl: "https://krushi-setu.netlify.app"
     },
     {
       id: 2,
@@ -74,9 +74,9 @@ const Projects = () => {
       id: 3,
       title: "Chat Sphere",
       position: "Real-time Messaging App",
-      logo: "CC",
+      logo: "CS",
       description: "Responsive messaging app with WebSockets, secure auth, and mobile-first design.",
-      duration: "2022",
+      duration: "2023",
       location: "Web Application",
       techs: ["React.js", "Node.js", "Socket.io", "MongoDB"],
       color: "#ff5733",
@@ -87,15 +87,16 @@ const Projects = () => {
         "Optimized MongoDB queries for fast chat retrieval"
       ],
       detailedTechs: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.io", "JWT Auth", "bcrypt", "Responsive Design", "WebSockets", "User Presence"],
-      image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg",
+      image: "/mindscape.png",
       categories: ["Full Stack", "Real-time Communication"],
       codeUrl: "https://github.com/Dishang18/chat-app"
     },
     {
       id: 4,
-      title: "Alumni Connect",
+      title: "CharuVerse",
       position: "College-Alumni Networking Platform",
-      logo: "AC",
+      // use an image from the public folder for the logo
+      logo: "./charusat.jpg",
       description: "A robust platform enabling colleges to manage and foster connections with their alumni. Supports multiple roles (Admin, College Admin, Student, Alumni) and features for arranging meetings, events, and ongoing engagement.",
       duration: "2025",
       location: "Web Application",
@@ -194,14 +195,24 @@ const Projects = () => {
               <div className="p-6">
                 <div className="flex items-center gap-4 mb-4">
                   <div
-                    className="w-12 h-12 rounded-lg flex items-center justify-center text-lg font-bold shadow-md"
+                    className="w-12 h-12 rounded-lg flex items-center justify-center text-lg font-bold shadow-md overflow-hidden"
                     style={{
                       background: project.color,
                       color: '#fff'
                     }}
                     aria-hidden="true"
                   >
-                    {project.logo}
+                    {project.logo && (typeof project.logo === 'string' && (project.logo.startsWith('/') || /\.(png|jpe?g|svg|webp|gif)$/i.test(project.logo))) ? (
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        className="w-full h-full object-cover rounded-lg"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      project.logo
+                    )}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-orange-500 group-hover:text-orange-400 transition-colors">
